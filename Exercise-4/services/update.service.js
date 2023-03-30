@@ -1,15 +1,24 @@
-const { writeColorFile, readColorFile } = require("../utils/file_operations");
+const { writeColorFile, readColorFile } = require("../utils/file.utils");
 
-const updateBuddyService = async (buddyData,buddyId) => {
-  const BUDDIES_DATA = await readColorFile("./cdw_ace23_buddies.json");
-  const BUDDY_INDEX = BUDDIES_DATA.findIndex((buddy) => buddy.employeeId === buddyId);
-  if (BUDDY_INDEX !== -1) {
-    BUDDIES_DATA[BUDDY_INDEX].nickName = buddyData.nickName;
-    BUDDIES_DATA[BUDDY_INDEX].hobbies = buddyData.hobbies;
-    const MESSAGE = await writeColorFile("./cdw_ace23_buddies.json", JSON.stringify(BUDDIES_DATA));
-    return MESSAGE;
+const updateBuddyService = async (buddyData, buddyId) => {
+  let response;
+  response = await readColorFile("./cdw_ace23_buddies.json");
+  if (response.status === "success") {
+    const BUDDY_INDEX = response.data.findIndex((buddy) => buddy.employeeId === buddyId);
+    if (BUDDY_INDEX !== -1) {
+      response.data[BUDDY_INDEX].nickName = buddyData.nickName;
+      response.data[BUDDY_INDEX].hobbies = buddyData.hobbies;
+      response = await writeColorFile("./cdw_ace23_buddies.json", JSON.stringify(response.data));
+      if (response.status === "success") {
+        return "Buddy Updated Successfully!!!";
+      } else {
+        return "Error in updating buddy!!!";
+      }
+    } else {
+      return "Buddy not found!!!";
+    }
   } else {
-    return "Buddy Not found!";
+    return "Error in updating buddy!!!";
   }
 };
 

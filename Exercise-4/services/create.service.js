@@ -1,10 +1,19 @@
-const { writeColorFile, readColorFile } = require("../utils/file_operations");
+const { writeColorFile, readColorFile } = require("../utils/file.utils");
 
 const addBuddyService = async (buddyObject) => {
-  const BUDDIES_DATA = await readColorFile("./cdw_ace23_buddies.json");
-  BUDDIES_DATA.push(buddyObject);
-  const MESSAGE = await writeColorFile("./cdw_ace23_buddies.json", JSON.stringify(BUDDIES_DATA));
-  return MESSAGE;
+  let response;
+  response = await readColorFile("./cdw_ace23_buddies.json");
+  if (response.status === "success") {
+    response.data.push(buddyObject);
+    response = await writeColorFile("./cdw_ace23_buddies.json", JSON.stringify(response.data));
+    if (response.status === "success") {
+      return "Buddy Added Successfully!!!";
+    } else {
+      return "Error in adding buddy!!!";
+    }
+  } else {
+    return "Error in adding buddy!!!";
+  }
 };
 
 module.exports = { addBuddyService };
