@@ -1,7 +1,7 @@
 const fs = require("fs");
 
-const readColorFile = (path) => {
-  const readPromise = new Promise((resolve, reject) => {
+const readColorFile = async (path) => {
+  return new Promise((resolve, reject) => {
     fs.readFile(path, "utf-8", (err, data) => {
       if (err) {
         reject(err);
@@ -9,20 +9,17 @@ const readColorFile = (path) => {
         resolve(data);
       }
     });
-  });
-  const result = readPromise.then(
-    (data) => {
+  })
+    .then((data) => {
       return JSON.parse(data);
-    },
-    (err) => {
+    })
+    .catch((err) => {
       return err;
-    }
-  );
-  return result;
+    });
 };
 
-const writeColorFile = (path, data) => {
-  const writePromise = new Promise((resolve, reject) => {
+const writeColorFile = async (path, data) => {
+  return new Promise((resolve, reject) => {
     fs.writeFile(path, data, (err) => {
       if (err) {
         reject(err);
@@ -30,16 +27,13 @@ const writeColorFile = (path, data) => {
         resolve("Data written successfully!");
       }
     });
-  });
-  const result = writePromise.then(
-    (data) => {
+  })
+    .then((data) => {
       return data;
-    },
-    (err) => {
+    })
+    .catch((err) => {
       return err;
-    }
-  );
-  return result;
+    });
 };
 
 module.exports = {
