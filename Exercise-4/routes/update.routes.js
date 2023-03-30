@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const UPDATE_CONTROLLER = require("../controllers/update_controller");
+const UPDATE_CONTROLLER = require("../controllers/update.controller");
 
 router.put("/:id", UPDATE_CONTROLLER.updateBuddy);
 

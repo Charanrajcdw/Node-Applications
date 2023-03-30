@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const READ_CONTROLLER = require("../controllers/read_controller");
+const READ_CONTROLLER = require("../controllers/read.controller");
 
 router.get("/:id", READ_CONTROLLER.readBuddy);
 
