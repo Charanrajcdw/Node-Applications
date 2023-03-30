@@ -6,16 +6,10 @@ const readColorFile = async (path) => {
       if (err) {
         reject(err);
       } else {
-        resolve(data);
+        resolve(JSON.parse(data));
       }
     });
   })
-    .then((data) => {
-      return JSON.parse(data);
-    })
-    .catch((err) => {
-      return err;
-    });
 };
 
 const writeColorFile = async (path, data) => {
@@ -28,12 +22,6 @@ const writeColorFile = async (path, data) => {
       }
     });
   })
-    .then((data) => {
-      return data;
-    })
-    .catch((err) => {
-      return err;
-    });
 };
 
 module.exports = {
