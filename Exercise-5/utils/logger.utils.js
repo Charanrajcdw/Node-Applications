@@ -1,13 +1,29 @@
 const { createLogger, format, transports } = require("winston");
+require("dotenv").config();
 
-module.exports = createLogger({
-  transports: new transports.File({
-    level: process.env.LOGGER_LEVEL,
-    filename: "./logs/error.log",
-    format: format.combine(
-      format.timestamp({ format: "MMM-DD-YYYY HH:mm:ss" }),
-      format.align(),
-      format.printf((info) => `${info.level}: ${[info.timestamp]}: ${info.message}`)
-    ),
-  }),
-});
+const GET_LOGGER = (loggerLevel, loggerPath) =>
+  createLogger({
+    transports: new transports.File({
+      level: loggerLevel,
+      filename: loggerPath,
+      format: format.combine(
+        format.timestamp({ format: "MMM-DD-YYYY HH:mm:ss" }),
+        format.align(),
+        format.printf((info) => `${info.level}:\t${[info.timestamp]}: ${info.message}`)
+      ),
+    }),
+  });
+
+const INFO_LOGGER = GET_LOGGER(process.env.INFO_LEVEL, "./logs/info.log");
+const ERROR_LOGGER = GET_LOGGER(process.env.ERROR_LEVEL, "./logs/error.log");
+
+const LOGGER = {
+  info: (params) => {
+    return INFO_LOGGER.info(params);
+  },
+  error: (params) => {
+    return ERROR_LOGGER.error(params);
+  },
+};
+
+module.exports = LOGGER;

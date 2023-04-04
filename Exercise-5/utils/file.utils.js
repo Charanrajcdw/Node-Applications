@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const readColorFile = (path) => {
+const readFile = (path) => {
   const readPromise = new Promise((resolve, reject) => {
     fs.readFile(path, "utf-8", (err, data) => {
       if (err) {
@@ -21,7 +21,7 @@ const readColorFile = (path) => {
   return result;
 };
 
-const writeColorFile = (path, data) => {
+const writeFile = (path, data) => {
   const writePromise = new Promise((resolve, reject) => {
     fs.writeFile(path, data, (err) => {
       if (err) {
@@ -42,8 +42,4 @@ const writeColorFile = (path, data) => {
   return result;
 };
 
-module.exports = {
-  readColorFile,
-  writeColorFile,
-};
-
+module.exports = { readFile, writeFile };

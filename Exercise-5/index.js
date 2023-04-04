@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const fs = require("fs");
 const cors = require("cors");
+const ROUTES = require("./routes/buddy.routes");
 require("dotenv").config();
 
 app.use(express.urlencoded({ extended: true }));
@@ -12,17 +13,7 @@ app.use(
   })
 );
 
-const CREATE_ROUTE = require("./routes/create.routes");
-app.use("/create", CREATE_ROUTE);
-
-const READ_ROUTE = require("./routes/read.routes");
-app.use("/read", READ_ROUTE);
-
-const UPDATE_ROUTE = require("./routes/update.routes");
-app.use("/update", UPDATE_ROUTE);
-
-const DELETE_ROUTE = require("./routes/delete.routes");
-app.use("/delete", DELETE_ROUTE);
+app.use("/buddy", ROUTES);
 
 app.listen(process.env.PORT, () => {
   fs.writeFile("./cdw_ace23_buddies.json", "[]", (err) => {
