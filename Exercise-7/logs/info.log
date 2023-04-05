@@ -1,0 +1,46 @@
+info:	Apr-06-2023 01:37:12: 	IP:::ffff:127.0.0.1, URL:/users/register, METHOD:POST
+info:	Apr-06-2023 01:37:12: 	IP: ::ffff:127.0.0.1, URL: /users/register, METHOD: POST, MESSAGE: User Registered Successfully!!!
+info:	Apr-06-2023 01:37:14: 	IP:::ffff:127.0.0.1, URL:/users/register, METHOD:POST
+info:	Apr-06-2023 01:37:18: 	IP:::ffff:127.0.0.1, URL:/users/login, METHOD:POST
+info:	Apr-06-2023 01:37:18: 	IP: ::ffff:127.0.0.1, URL: /users/login, METHOD: POST, MESSAGE: User logged in successfully!!!
+info:	Apr-06-2023 01:37:24: 	IP:::ffff:127.0.0.1, URL:/users/login, METHOD:POST
+info:	Apr-06-2023 01:37:29: 	IP:::ffff:127.0.0.1, URL:/users/login, METHOD:POST
+info:	Apr-06-2023 01:37:32: 	IP:::ffff:127.0.0.1, URL:/users/login, METHOD:POST
+info:	Apr-06-2023 01:37:32: 	IP: ::ffff:127.0.0.1, URL: /users/login, METHOD: POST, MESSAGE: User logged in successfully!!!
+info:	Apr-06-2023 01:42:10: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST
+info:	Apr-06-2023 01:42:59: 	IP:::ffff:127.0.0.1, URL:/users/login, METHOD:POST
+info:	Apr-06-2023 01:42:59: 	IP: ::ffff:127.0.0.1, URL: /users/login, METHOD: POST, MESSAGE: User logged in successfully!!!
+info:	Apr-06-2023 01:45:36: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:POST
+info:	Apr-06-2023 01:48:30: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:POST
+info:	Apr-06-2023 01:48:49: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:POST
+info:	Apr-06-2023 01:48:57: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:POST
+info:	Apr-06-2023 01:56:33: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:POST
+info:	Apr-06-2023 01:56:50: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:POST
+info:	Apr-06-2023 01:57:20: 	IP:::ffff:127.0.0.1, URL:/users/login, METHOD:POST
+info:	Apr-06-2023 01:57:20: 	IP: ::ffff:127.0.0.1, URL: /users/login, METHOD: POST, MESSAGE: User logged in successfully!!!
+info:	Apr-06-2023 01:57:30: 	IP:::ffff:127.0.0.1, URL:/users/login, METHOD:POST
+info:	Apr-06-2023 01:57:30: 	IP: ::ffff:127.0.0.1, URL: /users/login, METHOD: POST, MESSAGE: User logged in successfully!!!
+info:	Apr-06-2023 01:57:41: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:POST
+info:	Apr-06-2023 01:58:14: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:POST
+info:	Apr-06-2023 01:58:31: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:POST
+info:	Apr-06-2023 01:58:49: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:POST
+info:	Apr-06-2023 01:59:09: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:POST
+info:	Apr-06-2023 01:59:52: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:POST
+info:	Apr-06-2023 02:00:12: 	IP:::ffff:127.0.0.1, URL:/users/login, METHOD:POST
+info:	Apr-06-2023 02:00:12: 	IP: ::ffff:127.0.0.1, URL: /users/login, METHOD: POST, MESSAGE: User logged in successfully!!!
+info:	Apr-06-2023 02:00:46: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:POST
+info:	Apr-06-2023 02:01:38: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:POST
+info:	Apr-06-2023 02:02:45: 	IP:::ffff:127.0.0.1, URL:/users/login, METHOD:POST
+info:	Apr-06-2023 02:02:45: 	IP: ::ffff:127.0.0.1, URL: /users/login, METHOD: POST, MESSAGE: User logged in successfully!!!
+info:	Apr-06-2023 02:03:12: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST
+info:	Apr-06-2023 02:03:40: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST
+info:	Apr-06-2023 02:05:37: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST
+info:	Apr-06-2023 02:05:40: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST
+info:	Apr-06-2023 02:05:49: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST
+info:	Apr-06-2023 02:14:54: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST
+info:	Apr-06-2023 02:14:54: 	IP: ::ffff:127.0.0.1, URL: /tasks, METHOD: POST, MESSAGE: Buddy added
+info:	Apr-06-2023 02:14:57: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST
+info:	Apr-06-2023 02:16:43: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST
+info:	Apr-06-2023 02:16:46: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST
+info:	Apr-06-2023 02:16:46: 	IP: ::ffff:127.0.0.1, URL: /tasks, METHOD: POST, MESSAGE: Buddy added
+info:	Apr-06-2023 02:17:25: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST

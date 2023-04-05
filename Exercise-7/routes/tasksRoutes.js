@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const TASK_CONTROLLERS = require("../controllers/tasks.controllers");
+const TASK_CONTROLLERS = require("../controllers/tasksControllers");
 
 router.get("/:id", TASK_CONTROLLERS.readTask);
 

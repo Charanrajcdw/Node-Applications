@@ -1,0 +1,16 @@
+error:	Apr-06-2023 01:37:14: 	IP: ::ffff:127.0.0.1, URL: /users/register, METHOD: POST, MESSAGE: User already exists!!!
+error:	Apr-06-2023 01:37:24: 	IP: ::ffff:127.0.0.1, URL: /users/login, METHOD: POST, MESSAGE: User not exists!!!
+error:	Apr-06-2023 01:37:29: 	IP: ::ffff:127.0.0.1, URL: /users/login, METHOD: POST, MESSAGE: Password is invalid!!!
+error:	Apr-06-2023 01:56:33: 	IP: ::ffff:127.0.0.1, URL: /tasks/, METHOD: POST, MESSAGE: Token is not valid
+error:	Apr-06-2023 01:56:50: 	IP: ::ffff:127.0.0.1, URL: /tasks/, METHOD: POST, MESSAGE: Token is not valid
+error:	Apr-06-2023 01:57:41: 	IP: ::ffff:127.0.0.1, URL: /tasks/, METHOD: POST, MESSAGE: Token is not valid
+error:	Apr-06-2023 01:58:14: 	IP: ::ffff:127.0.0.1, URL: /tasks/, METHOD: POST, MESSAGE: Token is not valid
+error:	Apr-06-2023 01:58:31: 	IP: ::ffff:127.0.0.1, URL: /tasks/, METHOD: POST, MESSAGE: Token is not valid
+error:	Apr-06-2023 01:58:49: 	IP: ::ffff:127.0.0.1, URL: /tasks/, METHOD: POST, MESSAGE: Token is not valid
+error:	Apr-06-2023 01:59:09: 	IP: ::ffff:127.0.0.1, URL: /tasks/, METHOD: POST, MESSAGE: Token is not valid
+error:	Apr-06-2023 01:59:52: 	IP: ::ffff:127.0.0.1, URL: /tasks/, METHOD: POST, MESSAGE: Token is not valid
+error:	Apr-06-2023 02:01:38: 	IP: ::ffff:127.0.0.1, URL: /tasks/, METHOD: POST, MESSAGE: Token is not valid
+error:	Apr-06-2023 02:05:40: 	IP: ::ffff:127.0.0.1, URL: /tasks, METHOD: POST, MESSAGE: Token is not valid
+error:	Apr-06-2023 02:14:57: 	IP: ::ffff:127.0.0.1, URL: /tasks, METHOD: POST, MESSAGE: Token is not valid
+error:	Apr-06-2023 02:16:43: 	IP: ::ffff:127.0.0.1, URL: /tasks, METHOD: POST, MESSAGE: Token is not valid
+error:	Apr-06-2023 02:17:25: 	IP: ::ffff:127.0.0.1, URL: /tasks, METHOD: POST, MESSAGE: Token is not valid
