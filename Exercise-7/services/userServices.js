@@ -17,7 +17,7 @@ const registerUserService = async (userData) => {
       USER_DATA.push(userData);
       await writeFile(USER_DATA_PATH, JSON.stringify(USER_DATA));
       const TASKS_DATA = await readFile(TASK_DATA_PATH);
-      TASKS_DATA.push({ username: userData.username, tasks: [] });
+      TASKS_DATA.push({ username: userData.username, tasks: [], lastElementId: 0 });
       await writeFile(TASK_DATA_PATH, JSON.stringify(TASKS_DATA));
       response = { status: true, message: "User Registered Successfully!!!", token: getToken({ username: userData.username }) };
     }
