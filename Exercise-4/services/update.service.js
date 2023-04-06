@@ -1,24 +1,25 @@
+const { filePath, responseData } = require("../js/constants");
 const { writeColorFile, readColorFile } = require("../utils/file.utils");
 
 const updateBuddyService = async (buddyData, buddyId) => {
   let response;
-  response = await readColorFile("./cdw_ace23_buddies.json");
+  response = await readColorFile(filePath);
   if (response.status === "success") {
     const BUDDY_INDEX = response.data.findIndex((buddy) => buddy.employeeId === buddyId);
     if (BUDDY_INDEX !== -1) {
       response.data[BUDDY_INDEX].nickName = buddyData.nickName;
       response.data[BUDDY_INDEX].hobbies = buddyData.hobbies;
-      response = await writeColorFile("./cdw_ace23_buddies.json", JSON.stringify(response.data));
+      response = await writeColorFile(filePath, JSON.stringify(response.data));
       if (response.status === "success") {
-        return "Buddy Updated Successfully!!!";
+        return responseData.update.success;
       } else {
-        return "Error in updating buddy!!!";
+        return responseData.update.error;
       }
     } else {
-      return "Buddy not found!!!";
+      return responseData.common.missing;
     }
   } else {
-    return "Error in updating buddy!!!";
+    return responseData.update.error;
   }
 };
 
