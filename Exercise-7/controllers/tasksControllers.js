@@ -57,6 +57,11 @@ const readAllTasks = async (req, res) => {
     const RESPONSE = await TASK_SERVICE.readAllTasksService(TOKEN_DATA.username);
     if (RESPONSE.status) {
       res.status(200);
+      if (req.query) {
+        const { title, priority, dueDate, sortValue } = req.query;
+        RESPONSE.data = TASK_SERVICE.filterTasksService(RESPONSE.data, title, priority, dueDate);
+        RESPONSE.data = sortValue ? TASK_SERVICE.sortTasksService(RESPONSE.data, sortValue) : RESPONSE.data;
+      }
       if (RESPONSE.data.length == 0) RESPONSE.data = "No tasks to display";
       LOGGER.info(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: Tasks read successfully!!!`);
     } else {

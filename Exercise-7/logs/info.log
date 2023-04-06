@@ -1,8 +1,0 @@
-info:	Apr-07-2023 00:44:16: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:GET
-info:	Apr-07-2023 00:44:16: 	IP: ::ffff:127.0.0.1, URL: /tasks/, METHOD: GET, MESSAGE: Tasks read successfully!!!
-info:	Apr-07-2023 00:44:17: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:GET
-info:	Apr-07-2023 00:44:17: 	IP: ::ffff:127.0.0.1, URL: /tasks/, METHOD: GET, MESSAGE: Tasks read successfully!!!
-info:	Apr-07-2023 00:46:25: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:GET, Entered read all tasks controller
-info:	Apr-07-2023 00:46:25: 	IP: ::ffff:127.0.0.1, URL: /tasks/, METHOD: GET, MESSAGE: Tasks read successfully!!!
-info:	Apr-07-2023 00:46:25: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:GET, Entered read all tasks controller
-info:	Apr-07-2023 00:46:25: 	IP: ::ffff:127.0.0.1, URL: /tasks/, METHOD: GET, MESSAGE: Tasks read successfully!!!

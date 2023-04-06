@@ -78,4 +78,47 @@ const deleteTaskService = async (userName, taskId) => {
   return response;
 };
 
-module.exports = { addTaskService, readTaskService, readAllTasksService, updateTaskService, deleteTaskService };
+const filterTasksService = (data, title, priority, dueDate) => {
+  if (title) data = data.filter((task) => task.title === title);
+  if (priority) data = data.filter((task) => task.priority === priority);
+  if (dueDate) data = data.filter((task) => new Date(task.dueDate) <= new Date(dueDate));
+  return data;
+};
+
+const sortTasksService = (data, sortValue) => {
+  switch (sortValue) {
+    case "title":
+      data.sort(function (task1, task2) {
+        const TITLE_1 = task1.title.toUpperCase();
+        const TITLE_2 = task2.title.toUpperCase();
+        return TITLE_1 > TITLE_2 ? 1 : TITLE_2 > TITLE_1 ? -1 : 0;
+      });
+      break;
+    case "priority":
+      const PRIORITIES = ["high", "medium", "low"];
+      data.sort(function (task1, task2) {
+        const PRIORITY_1 = PRIORITIES.indexOf(task1.priority.toLowerCase());
+        const PRIORITY_2 = PRIORITIES.indexOf(task2.priority.toLowerCase());
+        return PRIORITY_1 > PRIORITY_2 ? 1 : PRIORITY_2 > PRIORITY_1 ? -1 : 0;
+      });
+      break;
+    case "dueDate":
+      data.sort(function (task1, task2) {
+        const DATE_1 = new Date(task1.dueDate);
+        const DATE_2 = new Date(task2.dueDate);
+        return DATE_1 > DATE_2 ? 1 : DATE_2 > DATE_1 ? -1 : 0;
+      });
+      break;
+  }
+  return data;
+};
+
+module.exports = {
+  addTaskService,
+  readTaskService,
+  readAllTasksService,
+  updateTaskService,
+  deleteTaskService,
+  filterTasksService,
+  sortTasksService,
+};
