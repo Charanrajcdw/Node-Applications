@@ -1,0 +1,2 @@
+error:	Apr-06-2023 20:01:51: 	IP:::ffff:127.0.0.1, URL:/buddy/1, STATUS:undefined, MESSAGE:Error in updating buddy!!!TypeError: Assignment to constant variable.
+error:	Apr-06-2023 20:02:22: 	IP:::ffff:127.0.0.1, URL:/buddy/1, STATUS:undefined, MESSAGE:Error in updating buddy!!!TypeError: Assignment to constant variable.

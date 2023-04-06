@@ -63,14 +63,16 @@ const readAllBuddiesService = async () => {
 const updateBuddyService = async (buddyData, buddyId) => {
   let response;
   try {
-    const BUDDIES_DATA = await readFile("./cdw_ace23_buddies.json");
-    const BUDDY_INDEX = BUDDIES_DATA.findIndex((buddy) => buddy.employeeId === buddyId);
-    if (BUDDY_INDEX !== -1) {
-      BUDDIES_DATA[BUDDY_INDEX].nickName = buddyData.nickName;
-      BUDDIES_DATA[BUDDY_INDEX].hobbies = buddyData.hobbies;
-      await writeFile("./cdw_ace23_buddies.json", JSON.stringify(BUDDIES_DATA));
-    }
-    response = { status: true, data: BUDDY_INDEX };
+    let buddiesData = await readFile("./cdw_ace23_buddies.json");
+    let isModified = false;
+    buddiesData = buddiesData.map((buddy) => {
+      if (buddy.employeeId === buddyId) {
+        isModified = true;
+        return { ...buddy, nickName: buddyData.nickName, hobbies: buddyData.hobbies };
+      } else return buddy;
+    });
+    await writeFile("./cdw_ace23_buddies.json", JSON.stringify(buddiesData));
+    response = { status: true, data: isModified };
   } catch (err) {
     response = { status: false, data: "Error in updating buddy!!!" + err };
   }
@@ -87,13 +89,9 @@ const deleteBuddyService = async (buddyId) => {
   let response;
   try {
     const BUDDIES_DATA = await readFile("./cdw_ace23_buddies.json");
-    const BUDDY_INDEX = BUDDIES_DATA.findIndex((buddy) => buddy.employeeId === buddyId);
-    if (BUDDY_INDEX !== -1) {
-      const FILTERED_DATA = BUDDIES_DATA.filter((buddy) => buddy.employeeId !== buddyId);
-      await writeFile("./cdw_ace23_buddies.json", JSON.stringify(FILTERED_DATA));
-      response = { status: true, data: BUDDY_INDEX };
-    }
-    response = { status: true, data: BUDDY_INDEX };
+    const FILTERED_DATA = BUDDIES_DATA.filter((buddy) => buddy.employeeId !== buddyId);
+    await writeFile("./cdw_ace23_buddies.json", JSON.stringify(FILTERED_DATA));
+    response = { status: true, data: BUDDIES_DATA.length!==FILTERED_DATA };
   } catch (err) {
     response = { status: false, data: "Error in deleting buddy!!!" + err };
   }

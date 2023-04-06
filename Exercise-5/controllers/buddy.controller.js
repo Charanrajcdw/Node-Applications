@@ -63,8 +63,8 @@ const updateBuddy = async (req, res) => {
   const BUDDY_ID = req.params.id;
   const RESPONSE = await BUDDY_SERVICE.updateBuddyService(BUDDY_DATA, BUDDY_ID);
   if (RESPONSE.status) {
-    if (RESPONSE.data !== -1) {
-      res.status(204).send("Buddy Updated Successfully!!!");
+    if (RESPONSE.data) {
+      res.status(200).send("Buddy Updated Successfully!!!");
     } else {
       res.status(404).send("BUDDY NOT FOUND!!!");
     }
@@ -83,8 +83,8 @@ const deleteBuddy = async (req, res) => {
   const BUDDY_ID = req.params.id;
   const RESPONSE = await BUDDY_SERVICE.deleteBuddyService(BUDDY_ID);
   if (RESPONSE.status) {
-    if (RESPONSE.data !== -1) {
-      res.status(204).send("Buddy Deleted Successfully!!!");
+    if (RESPONSE.data) {
+      res.status(200).send("Buddy Deleted Successfully!!!");
     } else {
       res.status(404).send("BUDDY NOT FOUND!!!");
     }
