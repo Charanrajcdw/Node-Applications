@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const BUDDY_CONTROLLER = require("../controllers/buddy.controller");
 
+//routes all the /buddy requests to their respective buddy operations
+
 router.get("/:id", BUDDY_CONTROLLER.readBuddy);
 
 router.get("/", BUDDY_CONTROLLER.readAllBuddies);

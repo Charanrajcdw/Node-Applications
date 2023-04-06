@@ -1,4 +1,0 @@
-error:	Apr-05-2023 01:48:36: 	IP:::ffff:127.0.0.1, URL:/buddy/, STATUS:undefined, MESSAGE:Error in adding buddy!!!Error: ENOENT: no such file or directory, open './cdw_ace23_buddies.jso'
-error:	Apr-05-2023 01:48:50: 	IP:::ffff:127.0.0.1, URL:/buddy/, STATUS:undefined, MESSAGE:Error in reading buddy!!!Error: ENOENT: no such file or directory, open './cdw_ace23_buddies.jso'
-error:	Apr-05-2023 01:48:58: 	IP:::ffff:127.0.0.1, URL:/buddy/1, STATUS:undefined, MESSAGE:Error in updating buddy!!!Error: ENOENT: no such file or directory, open './cdw_ace23_buddies.jso'
-error:	Apr-05-2023 01:49:02: 	IP:::ffff:127.0.0.1, URL:/buddy/1, STATUS:undefined, MESSAGE:Error in deleting buddy!!!Error: ENOENT: no such file or directory, open './cdw_ace23_buddies.jso'

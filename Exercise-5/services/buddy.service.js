@@ -1,5 +1,11 @@
 const { writeFile, readFile } = require("../utils/file.utils");
 
+/**
+ * Adds a buddy data to the buddies file
+ *
+ * @param {Object} buddyObject - a object with buddy details
+ * @returns the response of the add operation
+ */
 const addBuddyService = async (buddyObject) => {
   let response;
   try {
@@ -13,6 +19,12 @@ const addBuddyService = async (buddyObject) => {
   return response;
 };
 
+/**
+ * Read a single buddy from the buddies file
+ *
+ * @param {Number} buddyId - the id of the buddy to read
+ * @returns the read buddy and read operation response
+ */
 const readBuddyService = async (buddyId) => {
   let response;
   try {
@@ -25,6 +37,11 @@ const readBuddyService = async (buddyId) => {
   return response;
 };
 
+/**
+ * Read all buddies from the buddies file
+ *
+ * @returns all the buddies and read response response
+ */
 const readAllBuddiesService = async () => {
   let response;
   try {
@@ -36,6 +53,13 @@ const readAllBuddiesService = async () => {
   return response;
 };
 
+/**
+ * Update a buddies hobbies and nickname into the buddies file
+ *
+ * @param {Object} buddyData - the update data of the buddy
+ * @param {Number} buddyId - the id of the buddy to update
+ * @returns the response of the update operation
+ */
 const updateBuddyService = async (buddyData, buddyId) => {
   let response;
   try {
@@ -53,6 +77,12 @@ const updateBuddyService = async (buddyData, buddyId) => {
   return response;
 };
 
+/**
+ * Delete a single buddy from the buddies file
+ *
+ * @param {Object} buddyId - the id of the buddy to delete
+ * @returns the response of the delete operation
+ */
 const deleteBuddyService = async (buddyId) => {
   let response;
   try {

@@ -1,6 +1,13 @@
 const { createLogger, format, transports } = require("winston");
 require("dotenv").config();
 
+/**
+ * Creates a winston logger
+ *
+ * @param {String} loggerLevel - level of log to be allowed in file
+ * @param {*} loggerPath - path of file for the logs
+ * @returns - a winston logger
+ */
 const GET_LOGGER = (loggerLevel, loggerPath) =>
   createLogger({
     transports: new transports.File({
