@@ -3,6 +3,7 @@ const { getToken } = require("../utils/authUtils");
 const bcrypt = require("bcrypt");
 const SALT_ROUNDS = 10;
 const USER_DATA_PATH = "./user_data.json";
+const TASK_DATA_PATH = "./task_data.json";
 
 const registerUserService = async (userData) => {
   let response;
@@ -15,6 +16,9 @@ const registerUserService = async (userData) => {
       userData.password = await bcrypt.hash(userData.password, SALT_ROUNDS);
       USER_DATA.push(userData);
       await writeFile(USER_DATA_PATH, JSON.stringify(USER_DATA));
+      const TASKS_DATA = await readFile(TASK_DATA_PATH);
+      TASKS_DATA.push({ username: userData.username, tasks: [] });
+      await writeFile(TASK_DATA_PATH, JSON.stringify(TASKS_DATA));
       response = { status: true, message: "User Registered Successfully!!!", token: getToken({ username: userData.username }) };
     }
   } catch (err) {
@@ -34,7 +38,7 @@ const loginUserService = async (userData) => {
       if (IS_USER_VALID) {
         response = { status: true, message: "User logged in successfully!!!", token: getToken({ username: userData.username }) };
       } else {
-        response = { status: true, message: "Password is invalid!!!"};
+        response = { status: true, message: "Password is invalid!!!" };
       }
     } else {
       response = { status: true, message: "User not exists!!!" };
