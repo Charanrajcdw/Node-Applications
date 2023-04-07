@@ -1,22 +1,28 @@
 const TASK_SERVICE = require("../services/tasksServices");
 const LOGGER = require("../utils/loggerUtils");
+const VALIDATION = require("../utils/validationUtils");
 const { verifyToken } = require("../utils/authUtils");
 
 const addTask = async (req, res) => {
   LOGGER.info(`IP:${req.ip}, URL:${req.originalUrl}, METHOD:${req.method}, Entered add task controller`);
   try {
-    const TASK_DATA = req.body;
     const TOKEN_DATA = verifyToken(req.headers.authorization.split(" ")[1]);
-    const RESPONSE = await TASK_SERVICE.addTaskService(TOKEN_DATA.username, TASK_DATA);
-    if (RESPONSE.status) {
-      res.status(201);
-      LOGGER.info(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${RESPONSE.data}`);
+    let taskData, response;
+    if (VALIDATION.addTaskValidation(req)) {
+      taskData = req.body;
+      response = await TASK_SERVICE.addTaskService(TOKEN_DATA.username, taskData);
     } else {
-      res.status(500);
-      LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${RESPONSE.data}`);
+      response = { status: false, data: "INVALID REQUEST!!!", code: 400 };
     }
-    delete RESPONSE.status;
-    res.json(RESPONSE);
+    if (response.status) {
+      res.status(201);
+      LOGGER.info(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${response.data}`);
+    } else {
+      res.status(response.code ? response.code : 500);
+      LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${response.data}`);
+    }
+    delete response.status;
+    res.json(response);
   } catch (err) {
     LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: Token is not valid`);
     res.status(401).json({ message: "Unable to add task!!! Please, login again!!!" });
@@ -26,24 +32,29 @@ const addTask = async (req, res) => {
 const readTask = async (req, res) => {
   LOGGER.info(`IP:${req.ip}, URL:${req.originalUrl}, METHOD:${req.method}, Entered read task controller`);
   try {
-    const TASK_ID = parseInt(req.params.id);
     const TOKEN_DATA = verifyToken(req.headers.authorization.split(" ")[1]);
-    const RESPONSE = await TASK_SERVICE.readTaskService(TOKEN_DATA.username, TASK_ID);
-    if (RESPONSE.status) {
-      if (RESPONSE.data) {
+    const TASK_ID = parseInt(req.params.id);
+    let response;
+    if (isNaN(TASK_ID)) {
+      response = { status: false, data: "INVALID REQUEST!!!", code: 400 };
+    } else {
+      response = await TASK_SERVICE.readTaskService(TOKEN_DATA.username, TASK_ID);
+    }
+    if (response.status) {
+      if (response.data) {
         res.status(200);
         LOGGER.info(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: Task read successfully!!!`);
       } else {
         res.status(404);
-        RESPONSE.data = "Task not found!!!";
-        LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${RESPONSE.data}`);
+        response.data = "Task not found!!!";
+        LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${response.data}`);
       }
     } else {
-      res.status(500);
-      LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${RESPONSE.data}`);
+      res.status(response.code ? response.code : 500);
+      LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${response.data}`);
     }
-    delete RESPONSE.status;
-    res.json(RESPONSE);
+    delete response.status;
+    res.json(response);
   } catch (err) {
     LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: Token is not valid`);
     res.status(401).json({ message: "Unable to read task!!! Please, login again!!!" });
@@ -89,26 +100,31 @@ const readAllTasks = async (req, res) => {
 const updateTask = async (req, res) => {
   LOGGER.info(`IP:${req.ip}, URL:${req.originalUrl}, METHOD:${req.method} Entered update task controller`);
   try {
-    const TASK_ID = parseInt(req.params.id);
-    const TASK_DATA = req.body;
     const TOKEN_DATA = verifyToken(req.headers.authorization.split(" ")[1]);
-    const RESPONSE = await TASK_SERVICE.updateTaskService(TOKEN_DATA.username, TASK_ID, TASK_DATA);
-    if (RESPONSE.status) {
-      if (RESPONSE.data) {
+    const TASK_ID = parseInt(req.params.id);
+    let taskData, response;
+    if (!isNaN(TASK_ID) && VALIDATION.updateTaskValidation(req)) {
+      taskData = req.body;
+      response = await TASK_SERVICE.updateTaskService(TOKEN_DATA.username, TASK_ID, taskData);
+    } else {
+      response = { status: false, data: "INVALID REQUEST!!!", code: 400 };
+    }
+    if (response.status) {
+      if (response.data) {
         res.status(200);
-        RESPONSE.data = "Task Updated Successfully!!!";
-        LOGGER.info(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${RESPONSE.data}`);
+        response.data = "Task Updated Successfully!!!";
+        LOGGER.info(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${response.data}`);
       } else {
         res.status(404);
-        RESPONSE.data = "Task not found!!!";
-        LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${RESPONSE.data}`);
+        response.data = "Task not found!!!";
+        LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${response.data}`);
       }
     } else {
-      res.status(500);
-      LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${RESPONSE.data}`);
+      res.status(response.code ? response.code : 500);
+      LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${response.data}`);
     }
-    delete RESPONSE.status;
-    res.json(RESPONSE);
+    delete response.status;
+    res.json(response);
   } catch (err) {
     LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: Token is not valid`);
     res.status(401).json({ message: "Unable to update task!!! Please, login again!!!" });
@@ -118,25 +134,30 @@ const updateTask = async (req, res) => {
 const deleteTask = async (req, res) => {
   LOGGER.info(`IP:${req.ip}, URL:${req.originalUrl}, METHOD:${req.method} Entered delete task controller`);
   try {
-    const TASK_ID = parseInt(req.params.id);
     const TOKEN_DATA = verifyToken(req.headers.authorization.split(" ")[1]);
-    const RESPONSE = await TASK_SERVICE.deleteTaskService(TOKEN_DATA.username, TASK_ID);
-    if (RESPONSE.status) {
-      if (RESPONSE.data) {
+    const TASK_ID = parseInt(req.params.id);
+    let response;
+    if (isNaN(TASK_ID)) {
+      response = { status: false, data: "INVALID REQUEST!!!", code: 400 };
+    } else {
+      response = await TASK_SERVICE.deleteTaskService(TOKEN_DATA.username, TASK_ID);
+    }
+    if (response.status) {
+      if (response.data) {
         res.status(200);
-        RESPONSE.data = "Task Deleted Successfully!!!";
-        LOGGER.info(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${RESPONSE.data}`);
+        response.data = "Task Deleted Successfully!!!";
+        LOGGER.info(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${response.data}`);
       } else {
         res.status(404);
-        RESPONSE.data = "Task not found!!!";
-        LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${RESPONSE.data}`);
+        response.data = "Task not found!!!";
+        LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${response.data}`);
       }
     } else {
-      res.status(500);
-      LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${RESPONSE.data}`);
+      res.status(response.code ? response.code : 500);
+      LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${response.data}`);
     }
-    delete RESPONSE.status;
-    res.json(RESPONSE);
+    delete response.status;
+    res.json(response);
   } catch (err) {
     LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: Token is not valid`);
     res.status(401).json({ message: "Unable to delete task!!! Please, login again!!!" });

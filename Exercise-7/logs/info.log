@@ -66,3 +66,112 @@ info:	Apr-07-2023 11:20:18: 	IP:::ffff:127.0.0.1, URL:/tasks/?sortValue=abc, MET
 info:	Apr-07-2023 11:20:18: 	IP: ::ffff:127.0.0.1, URL: /tasks/?sortValue=abc, METHOD: GET, MESSAGE: Tasks read successfully!!!
 info:	Apr-07-2023 11:20:26: 	IP:::ffff:127.0.0.1, URL:/tasks/?sortValue=dueDate, METHOD:GET, Entered read all tasks controller
 info:	Apr-07-2023 11:20:26: 	IP: ::ffff:127.0.0.1, URL: /tasks/?sortValue=dueDate, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 13:19:19: 	IP:::ffff:127.0.0.1, URL:/users/register, METHOD:POST
+info:	Apr-07-2023 13:19:33: 	IP:::ffff:127.0.0.1, URL:/users/register, METHOD:POST
+info:	Apr-07-2023 13:19:40: 	IP:::ffff:127.0.0.1, URL:/users/register, METHOD:POST
+info:	Apr-07-2023 13:19:46: 	IP:::ffff:127.0.0.1, URL:/users/register, METHOD:POST
+info:	Apr-07-2023 13:19:50: 	IP:::ffff:127.0.0.1, URL:/users/register, METHOD:POST
+info:	Apr-07-2023 13:21:06: 	IP:::ffff:127.0.0.1, URL:/users/register, METHOD:POST
+info:	Apr-07-2023 13:21:09: 	IP:::ffff:127.0.0.1, URL:/users/register, METHOD:POST
+info:	Apr-07-2023 13:21:16: 	IP:::ffff:127.0.0.1, URL:/users/register, METHOD:POST
+info:	Apr-07-2023 13:21:25: 	IP:::ffff:127.0.0.1, URL:/users/register, METHOD:POST
+info:	Apr-07-2023 13:21:29: 	IP:::ffff:127.0.0.1, URL:/users/register, METHOD:POST
+info:	Apr-07-2023 13:21:32: 	IP:::ffff:127.0.0.1, URL:/users/register, METHOD:POST
+info:	Apr-07-2023 13:21:32: 	IP: ::ffff:127.0.0.1, URL: /users/register, METHOD: POST, MESSAGE: User Registered Successfully!!!
+info:	Apr-07-2023 13:21:40: 	IP:::ffff:127.0.0.1, URL:/users/login, METHOD:POST
+info:	Apr-07-2023 13:21:41: 	IP: ::ffff:127.0.0.1, URL: /users/login, METHOD: POST, MESSAGE: User logged in successfully!!!
+info:	Apr-07-2023 13:21:50: 	IP:::ffff:127.0.0.1, URL:/users/login, METHOD:POST
+info:	Apr-07-2023 13:26:52: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST, Entered add task controller
+info:	Apr-07-2023 13:27:38: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST, Entered add task controller
+info:	Apr-07-2023 13:27:38: 	IP: ::ffff:127.0.0.1, URL: /tasks, METHOD: POST, MESSAGE: Task Added Successfully!!!
+info:	Apr-07-2023 13:29:29: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST, Entered add task controller
+info:	Apr-07-2023 13:29:53: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST, Entered add task controller
+info:	Apr-07-2023 13:29:53: 	IP: ::ffff:127.0.0.1, URL: /tasks, METHOD: POST, MESSAGE: Task Added Successfully!!!
+info:	Apr-07-2023 13:33:50: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST, Entered add task controller
+info:	Apr-07-2023 13:33:50: 	IP: ::ffff:127.0.0.1, URL: /tasks, METHOD: POST, MESSAGE: Task Added Successfully!!!
+info:	Apr-07-2023 13:33:57: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST, Entered add task controller
+info:	Apr-07-2023 13:34:10: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST, Entered add task controller
+info:	Apr-07-2023 13:34:15: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST, Entered add task controller
+info:	Apr-07-2023 13:34:19: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST, Entered add task controller
+info:	Apr-07-2023 13:34:24: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST, Entered add task controller
+info:	Apr-07-2023 13:34:32: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST, Entered add task controller
+info:	Apr-07-2023 13:34:37: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST, Entered add task controller
+info:	Apr-07-2023 13:36:36: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST, Entered add task controller
+info:	Apr-07-2023 13:36:48: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST, Entered add task controller
+info:	Apr-07-2023 13:37:30: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST, Entered add task controller
+info:	Apr-07-2023 13:38:01: 	IP:::ffff:127.0.0.1, URL:/users/register, METHOD:POST
+info:	Apr-07-2023 13:40:26: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:POST, Entered add task controller
+info:	Apr-07-2023 13:40:36: 	IP:::ffff:127.0.0.1, URL:/users/register, METHOD:POST
+info:	Apr-07-2023 13:40:45: 	IP:::ffff:127.0.0.1, URL:/users/login, METHOD:POST
+info:	Apr-07-2023 13:41:31: 	IP:::ffff:127.0.0.1, URL:/users/register, METHOD:POST
+info:	Apr-07-2023 13:43:30: 	IP:::ffff:127.0.0.1, URL:/tasks, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 13:43:30: 	IP: ::ffff:127.0.0.1, URL: /tasks, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 13:43:36: 	IP:::ffff:127.0.0.1, URL:/tasks/hello, METHOD:GET, Entered read task controller
+info:	Apr-07-2023 13:45:28: 	IP:::ffff:127.0.0.1, URL:/tasks/hello, METHOD:GET, Entered read task controller
+info:	Apr-07-2023 13:45:31: 	IP:::ffff:127.0.0.1, URL:/tasks/1, METHOD:GET, Entered read task controller
+info:	Apr-07-2023 13:45:31: 	IP: ::ffff:127.0.0.1, URL: /tasks/1, METHOD: GET, MESSAGE: Task read successfully!!!
+info:	Apr-07-2023 13:51:29: 	IP:::ffff:127.0.0.1, URL:/tasks/1, METHOD:GET, Entered read task controller
+info:	Apr-07-2023 13:51:29: 	IP: ::ffff:127.0.0.1, URL: /tasks/1, METHOD: GET, MESSAGE: Task read successfully!!!
+info:	Apr-07-2023 13:51:35: 	IP:::ffff:127.0.0.1, URL:/tasks/hello, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 13:51:40: 	IP:::ffff:127.0.0.1, URL:/tasks/1, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 13:53:30: 	IP:::ffff:127.0.0.1, URL:/tasks/1, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 13:54:03: 	IP:::ffff:127.0.0.1, URL:/tasks/1, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 13:54:22: 	IP:::ffff:127.0.0.1, URL:/tasks/1, METHOD:GET, Entered read task controller
+info:	Apr-07-2023 13:54:22: 	IP: ::ffff:127.0.0.1, URL: /tasks/1, METHOD: GET, MESSAGE: Task read successfully!!!
+info:	Apr-07-2023 13:54:29: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:POST, Entered add task controller
+info:	Apr-07-2023 13:54:29: 	IP: ::ffff:127.0.0.1, URL: /tasks/, METHOD: POST, MESSAGE: Task Added Successfully!!!
+info:	Apr-07-2023 13:54:37: 	IP:::ffff:127.0.0.1, URL:/tasks/1, METHOD:GET, Entered read task controller
+info:	Apr-07-2023 13:54:37: 	IP: ::ffff:127.0.0.1, URL: /tasks/1, METHOD: GET, MESSAGE: Task read successfully!!!
+info:	Apr-07-2023 13:54:41: 	IP:::ffff:127.0.0.1, URL:/tasks/1, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 13:57:51: 	IP:::ffff:127.0.0.1, URL:/tasks/1, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 13:57:51: 	IP: ::ffff:127.0.0.1, URL: /tasks/1, METHOD: PUT, MESSAGE: Task Updated Successfully!!!
+info:	Apr-07-2023 13:57:54: 	IP:::ffff:127.0.0.1, URL:/tasks/1, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 13:57:54: 	IP: ::ffff:127.0.0.1, URL: /tasks/1, METHOD: PUT, MESSAGE: Task Updated Successfully!!!
+info:	Apr-07-2023 13:58:01: 	IP:::ffff:127.0.0.1, URL:/tasks/1, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 13:58:01: 	IP: ::ffff:127.0.0.1, URL: /tasks/1, METHOD: PUT, MESSAGE: Task Updated Successfully!!!
+info:	Apr-07-2023 13:58:06: 	IP:::ffff:127.0.0.1, URL:/tasks/1, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 13:58:06: 	IP: ::ffff:127.0.0.1, URL: /tasks/1, METHOD: PUT, MESSAGE: Task Updated Successfully!!!
+info:	Apr-07-2023 13:58:13: 	IP:::ffff:127.0.0.1, URL:/tasks/1, METHOD:GET, Entered read task controller
+info:	Apr-07-2023 13:58:13: 	IP: ::ffff:127.0.0.1, URL: /tasks/1, METHOD: GET, MESSAGE: Task read successfully!!!
+info:	Apr-07-2023 13:58:20: 	IP:::ffff:127.0.0.1, URL:/tasks/1, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 13:58:20: 	IP: ::ffff:127.0.0.1, URL: /tasks/1, METHOD: PUT, MESSAGE: Task Updated Successfully!!!
+info:	Apr-07-2023 13:59:22: 	IP:::ffff:127.0.0.1, URL:/tasks/1, METHOD:DELETE Entered delete task controller
+info:	Apr-07-2023 13:59:22: 	IP: ::ffff:127.0.0.1, URL: /tasks/1, METHOD: DELETE, MESSAGE: Task Deleted Successfully!!!
+info:	Apr-07-2023 13:59:27: 	IP:::ffff:127.0.0.1, URL:/tasks/1, METHOD:GET, Entered read task controller
+info:	Apr-07-2023 13:59:30: 	IP:::ffff:127.0.0.1, URL:/tasks/1, METHOD:DELETE Entered delete task controller
+info:	Apr-07-2023 13:59:34: 	IP:::ffff:127.0.0.1, URL:/tasks/hello, METHOD:DELETE Entered delete task controller
+info:	Apr-07-2023 14:05:45: 	IP:::ffff:127.0.0.1, URL:/tasks/2, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 14:05:45: 	IP: ::ffff:127.0.0.1, URL: /tasks/2, METHOD: PUT, MESSAGE: Task Updated Successfully!!!
+info:	Apr-07-2023 14:05:50: 	IP:::ffff:127.0.0.1, URL:/tasks/2, METHOD:GET, Entered read task controller
+info:	Apr-07-2023 14:05:50: 	IP: ::ffff:127.0.0.1, URL: /tasks/2, METHOD: GET, MESSAGE: Task read successfully!!!
+info:	Apr-07-2023 14:05:56: 	IP:::ffff:127.0.0.1, URL:/tasks/2, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 14:05:56: 	IP: ::ffff:127.0.0.1, URL: /tasks/2, METHOD: PUT, MESSAGE: Task Updated Successfully!!!
+info:	Apr-07-2023 14:05:59: 	IP:::ffff:127.0.0.1, URL:/tasks/2, METHOD:GET, Entered read task controller
+info:	Apr-07-2023 14:05:59: 	IP: ::ffff:127.0.0.1, URL: /tasks/2, METHOD: GET, MESSAGE: Task read successfully!!!
+info:	Apr-07-2023 14:06:08: 	IP:::ffff:127.0.0.1, URL:/tasks/2, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 14:06:08: 	IP: ::ffff:127.0.0.1, URL: /tasks/2, METHOD: PUT, MESSAGE: Task Updated Successfully!!!
+info:	Apr-07-2023 14:06:10: 	IP:::ffff:127.0.0.1, URL:/tasks/2, METHOD:GET, Entered read task controller
+info:	Apr-07-2023 14:06:10: 	IP: ::ffff:127.0.0.1, URL: /tasks/2, METHOD: GET, MESSAGE: Task read successfully!!!
+info:	Apr-07-2023 14:06:24: 	IP:::ffff:127.0.0.1, URL:/tasks/2, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 14:06:24: 	IP: ::ffff:127.0.0.1, URL: /tasks/2, METHOD: PUT, MESSAGE: Task Updated Successfully!!!
+info:	Apr-07-2023 14:06:27: 	IP:::ffff:127.0.0.1, URL:/tasks/2, METHOD:GET, Entered read task controller
+info:	Apr-07-2023 14:06:27: 	IP: ::ffff:127.0.0.1, URL: /tasks/2, METHOD: GET, MESSAGE: Task read successfully!!!
+info:	Apr-07-2023 14:07:18: 	IP:::ffff:127.0.0.1, URL:/tasks/2, METHOD:GET, Entered read task controller
+info:	Apr-07-2023 14:07:18: 	IP: ::ffff:127.0.0.1, URL: /tasks/2, METHOD: GET, MESSAGE: Task read successfully!!!
+info:	Apr-07-2023 14:07:23: 	IP:::ffff:127.0.0.1, URL:/tasks/2, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 14:07:23: 	IP: ::ffff:127.0.0.1, URL: /tasks/2, METHOD: PUT, MESSAGE: Task Updated Successfully!!!
+info:	Apr-07-2023 14:09:26: 	IP:::ffff:127.0.0.1, URL:/tasks/2, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 14:09:26: 	IP: ::ffff:127.0.0.1, URL: /tasks/2, METHOD: PUT, MESSAGE: Task Updated Successfully!!!
+info:	Apr-07-2023 14:10:10: 	IP:::ffff:127.0.0.1, URL:/tasks/2, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 14:10:14: 	IP:::ffff:127.0.0.1, URL:/tasks/2, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 14:11:04: 	IP:::ffff:127.0.0.1, URL:/tasks/2, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 14:11:05: 	IP: ::ffff:127.0.0.1, URL: /tasks/2, METHOD: PUT, MESSAGE: Task Updated Successfully!!!
+info:	Apr-07-2023 14:11:16: 	IP:::ffff:127.0.0.1, URL:/tasks/2, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 14:11:16: 	IP: ::ffff:127.0.0.1, URL: /tasks/2, METHOD: PUT, MESSAGE: Task Updated Successfully!!!
+info:	Apr-07-2023 14:12:16: 	IP:::ffff:127.0.0.1, URL:/tasks/2, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 14:12:16: 	IP: ::ffff:127.0.0.1, URL: /tasks/2, METHOD: PUT, MESSAGE: Task Updated Successfully!!!
+info:	Apr-07-2023 14:12:21: 	IP:::ffff:127.0.0.1, URL:/tasks/2, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 14:12:21: 	IP: ::ffff:127.0.0.1, URL: /tasks/2, METHOD: PUT, MESSAGE: Task Updated Successfully!!!
+info:	Apr-07-2023 14:14:29: 	IP:::ffff:127.0.0.1, URL:/tasks/2, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 14:14:34: 	IP:::ffff:127.0.0.1, URL:/tasks/2, METHOD:PUT Entered update task controller
+info:	Apr-07-2023 14:14:34: 	IP: ::ffff:127.0.0.1, URL: /tasks/2, METHOD: PUT, MESSAGE: Task Updated Successfully!!!

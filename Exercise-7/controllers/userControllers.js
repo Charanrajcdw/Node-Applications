@@ -1,44 +1,55 @@
 const USER_SERVICE = require("../services/userServices");
+const VALIDATION = require("../utils/validationUtils");
 const LOGGER = require("../utils/loggerUtils");
 
 const registerUser = async (req, res) => {
   LOGGER.info(`IP:${req.ip}, URL:${req.originalUrl}, METHOD:${req.method}`);
-  const USER_DATA = req.body;
-  const RESPONSE = await USER_SERVICE.registerUserService(USER_DATA);
-  if (RESPONSE.status) {
-    if (RESPONSE.token) {
+  let userData, response;
+  if (VALIDATION.userValidation(req)) {
+    userData = req.body;
+    response = await USER_SERVICE.registerUserService(userData);
+  } else {
+    response = { status: false, message: "INVALID REQUEST!!!", code: 400 };
+  }
+  if (response.status) {
+    if (response.token) {
       res.status(201);
-      LOGGER.info(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${RESPONSE.message}`);
+      LOGGER.info(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${response.message}`);
     } else {
       res.status(403);
-      LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${RESPONSE.message}`);
+      LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${response.message}`);
     }
   } else {
-    res.status(500);
-    LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${RESPONSE.message}`);
+    res.status(response.code ? response.code : 500);
+    LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${response.message}`);
   }
-  delete RESPONSE.status;
-  res.json(RESPONSE);
+  delete response.status;
+  res.json(response);
 };
 
 const loginUser = async (req, res) => {
   LOGGER.info(`IP:${req.ip}, URL:${req.originalUrl}, METHOD:${req.method}`);
-  const USER_DATA = req.body;
-  const RESPONSE = await USER_SERVICE.loginUserService(USER_DATA);
-  if (RESPONSE.status) {
-    if (RESPONSE.token) {
+  let userData, response;
+  if (VALIDATION.userValidation(req)) {
+    userData = req.body;
+    response = await USER_SERVICE.loginUserService(userData);
+  } else {
+    response = { status: false, message: "INVALID REQUEST!!!", code: 400 };
+  }
+  if (response.status) {
+    if (response.token) {
       res.status(200);
-      LOGGER.info(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${RESPONSE.message}`);
+      LOGGER.info(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${response.message}`);
     } else {
       res.status(401);
-      LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${RESPONSE.message}`);
+      LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${response.message}`);
     }
   } else {
-    res.status(500);
-    LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${RESPONSE.message}`);
+    res.status(response.code ? response.code : 500);
+    LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${response.message}`);
   }
-  delete RESPONSE.status;
-  res.json(RESPONSE);
+  delete response.status;
+  res.json(response);
 };
 
 module.exports = { registerUser, loginUser };
