@@ -1,9 +1,9 @@
 const express = require("express");
-const app = express();
 const cors = require("cors");
 const TASK_ROUTES = require("./routes/tasksRoutes");
 const USER_ROUTES = require("./routes/userRoutes");
 const LOGGER = require("./utils/loggerUtils");
+const app = express();
 const PORT = 4000;
 
 app.use(express.urlencoded({ extended: false }));

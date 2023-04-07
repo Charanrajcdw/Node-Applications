@@ -1,1 +1,4 @@
-[{"username":"charanraj","password":"$2b$10$Ij7CKx6XaLliJoQoRf3vF.2exD.1fHjZErfowyKr660RISoJWq0TC"},{"username":"raj","password":"$2b$10$Mu6XPum4/XM8SXxyucUq9uOH..h8Wjo1272s.ukAmTFh.yI5SJN46"}]
+[
+  { "username": "charanraj", "password": "$2b$10$Ij7CKx6XaLliJoQoRf3vF.2exD.1fHjZErfowyKr660RISoJWq0TC" },
+  { "username": "raj", "password": "$2b$10$Mu6XPum4/XM8SXxyucUq9uOH..h8Wjo1272s.ukAmTFh.yI5SJN46" }
+]
