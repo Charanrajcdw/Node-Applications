@@ -68,7 +68,7 @@ const queryTasks = (data, queryData, req, res) => {
     data = sortValue ? TASK_SERVICE.sortTasksService(data, sortValue) : data;
     data = page && limit ? TASK_SERVICE.paginateTasksService(data, page, limit) : data;
   } catch (err) {
-    LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: Token is not valid`);
+    LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${err.message}`);
     res.status(400).json({ message: err.message });
     return false;
   }
@@ -77,6 +77,7 @@ const queryTasks = (data, queryData, req, res) => {
 
 const readAllTasks = async (req, res) => {
   LOGGER.info(`IP:${req.ip}, URL:${req.originalUrl}, METHOD:${req.method}, Entered read all tasks controller`);
+  console.log(req.query);
   try {
     const TOKEN_DATA = verifyToken(req.headers.authorization.split(" ")[1]);
     const RESPONSE = await TASK_SERVICE.readAllTasksService(TOKEN_DATA.username);

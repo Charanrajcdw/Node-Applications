@@ -1,4 +1,3 @@
-const USER_SERVICE = require("../services/userServices");
 const axios = require("axios");
 const URL = "http://localhost:4000/users/";
 

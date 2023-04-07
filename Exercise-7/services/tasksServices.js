@@ -110,7 +110,7 @@ const sortTasksService = (data, sortValue) => {
       });
       break;
     default:
-      throw new Error("Invlaid sort request!!!");
+      throw new Error("Invalid sort request!!!");
   }
   return data;
 };
