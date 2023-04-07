@@ -1,0 +1,68 @@
+info:	Apr-07-2023 02:14:23: 	IP:::ffff:127.0.0.1, URL:/tasks/15, METHOD:DELETE Entered delete task controller
+info:	Apr-07-2023 02:14:23: 	IP: ::ffff:127.0.0.1, URL: /tasks/15, METHOD: DELETE, MESSAGE: Task Deleted Successfully!!!
+info:	Apr-07-2023 02:17:20: 	IP:::ffff:127.0.0.1, URL:/tasks/15?sortValue=dueDate, METHOD:DELETE Entered delete task controller
+info:	Apr-07-2023 02:17:27: 	IP:::ffff:127.0.0.1, URL:/tasks/15?sortValue=dueDate, METHOD:GET, Entered read task controller
+info:	Apr-07-2023 02:17:34: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 02:17:34: 	IP: ::ffff:127.0.0.1, URL: /tasks/, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 02:17:46: 	IP:::ffff:127.0.0.1, URL:/tasks/?sortValue=dueDate, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 02:17:46: 	IP: ::ffff:127.0.0.1, URL: /tasks/?sortValue=dueDate, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 02:24:52: 	IP:::ffff:127.0.0.1, URL:/tasks/?title=task1&priority=meduim, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 02:26:31: 	IP:::ffff:127.0.0.1, URL:/tasks/?title=task1&priority=meduim, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 02:26:39: 	IP:::ffff:127.0.0.1, URL:/tasks/?title=task1&priority=medium, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 02:27:16: 	IP:::ffff:127.0.0.1, URL:/tasks/?title=task1&priority=medium, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 02:27:16: 	IP: ::ffff:127.0.0.1, URL: /tasks/?title=task1&priority=medium, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 02:27:20: 	IP:::ffff:127.0.0.1, URL:/tasks/?title=task1, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 02:27:20: 	IP: ::ffff:127.0.0.1, URL: /tasks/?title=task1, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 02:27:23: 	IP:::ffff:127.0.0.1, URL:/tasks/?priority=medium, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 02:27:23: 	IP: ::ffff:127.0.0.1, URL: /tasks/?priority=medium, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 02:27:27: 	IP:::ffff:127.0.0.1, URL:/tasks/?dueDate=2023-04-17, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 02:27:27: 	IP: ::ffff:127.0.0.1, URL: /tasks/?dueDate=2023-04-17, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 02:27:42: 	IP:::ffff:127.0.0.1, URL:/tasks/?sortValue=dueDate, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 02:27:42: 	IP: ::ffff:127.0.0.1, URL: /tasks/?sortValue=dueDate, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 02:27:47: 	IP:::ffff:127.0.0.1, URL:/tasks/?priority=medium&sortValue=dueDate, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 02:27:47: 	IP: ::ffff:127.0.0.1, URL: /tasks/?priority=medium&sortValue=dueDate, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 02:30:51: 	IP:::ffff:127.0.0.1, URL:/tasks/, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 02:30:51: 	IP: ::ffff:127.0.0.1, URL: /tasks/, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 02:30:55: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=1&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 02:30:55: 	IP: ::ffff:127.0.0.1, URL: /tasks/?page=1&limit=5, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 02:31:03: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=2&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 02:31:03: 	IP: ::ffff:127.0.0.1, URL: /tasks/?page=2&limit=5, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 02:31:08: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=3&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 02:31:08: 	IP: ::ffff:127.0.0.1, URL: /tasks/?page=3&limit=5, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 02:31:14: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=4&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 02:31:14: 	IP: ::ffff:127.0.0.1, URL: /tasks/?page=4&limit=5, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 02:31:19: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=5&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 02:31:19: 	IP: ::ffff:127.0.0.1, URL: /tasks/?page=5&limit=5, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 11:14:35: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=5&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 11:14:45: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=1&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 11:14:45: 	IP: ::ffff:127.0.0.1, URL: /tasks/?page=1&limit=5, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 11:14:50: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=2&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 11:14:50: 	IP: ::ffff:127.0.0.1, URL: /tasks/?page=2&limit=5, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 11:14:53: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=3&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 11:14:53: 	IP: ::ffff:127.0.0.1, URL: /tasks/?page=3&limit=5, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 11:14:56: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=4&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 11:14:56: 	IP: ::ffff:127.0.0.1, URL: /tasks/?page=4&limit=5, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 11:15:44: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=0&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 11:16:09: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=0&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 11:16:09: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=0&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 11:17:05: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=0&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 11:17:37: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=0&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 11:17:37: 	IP: ::ffff:127.0.0.1, URL: /tasks/?page=0&limit=5, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 11:19:05: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=0&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 11:19:05: 	IP: ::ffff:127.0.0.1, URL: /tasks/?page=0&limit=5, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 11:19:20: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=0&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 11:19:20: 	IP: ::ffff:127.0.0.1, URL: /tasks/?page=0&limit=5, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 11:19:30: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=0&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 11:19:30: 	IP: ::ffff:127.0.0.1, URL: /tasks/?page=0&limit=5, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 11:19:44: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=0&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 11:19:44: 	IP: ::ffff:127.0.0.1, URL: /tasks/?page=0&limit=5, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 11:20:01: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=5&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 11:20:01: 	IP: ::ffff:127.0.0.1, URL: /tasks/?page=5&limit=5, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 11:20:04: 	IP:::ffff:127.0.0.1, URL:/tasks/?page=4&limit=5, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 11:20:04: 	IP: ::ffff:127.0.0.1, URL: /tasks/?page=4&limit=5, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 11:20:10: 	IP:::ffff:127.0.0.1, URL:/tasks/?sortValue=dueDate, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 11:20:10: 	IP: ::ffff:127.0.0.1, URL: /tasks/?sortValue=dueDate, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 11:20:18: 	IP:::ffff:127.0.0.1, URL:/tasks/?sortValue=abc, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 11:20:18: 	IP: ::ffff:127.0.0.1, URL: /tasks/?sortValue=abc, METHOD: GET, MESSAGE: Tasks read successfully!!!
+info:	Apr-07-2023 11:20:26: 	IP:::ffff:127.0.0.1, URL:/tasks/?sortValue=dueDate, METHOD:GET, Entered read all tasks controller
+info:	Apr-07-2023 11:20:26: 	IP: ::ffff:127.0.0.1, URL: /tasks/?sortValue=dueDate, METHOD: GET, MESSAGE: Tasks read successfully!!!

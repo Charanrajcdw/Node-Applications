@@ -109,8 +109,19 @@ const sortTasksService = (data, sortValue) => {
         return DATE_1 > DATE_2 ? 1 : DATE_2 > DATE_1 ? -1 : 0;
       });
       break;
+    default:
+      throw new Error("Invlaid sort request!!!");
   }
   return data;
+};
+
+const paginateTasksService = (data, page, limit) => {
+  page = parseInt(page);
+  limit = parseInt(limit);
+  const TASK_START_INDEX = (page - 1) * limit;
+  if (TASK_START_INDEX > data.length || page === 0 || limit === 0) throw new Error("Invalid page request!!!");
+  const TASK_END_INDEX = page * limit;
+  return data.slice(TASK_START_INDEX, TASK_END_INDEX);
 };
 
 module.exports = {
@@ -121,4 +132,5 @@ module.exports = {
   deleteTaskService,
   filterTasksService,
   sortTasksService,
+  paginateTasksService,
 };

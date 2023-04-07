@@ -26,7 +26,7 @@ const addTask = async (req, res) => {
 const readTask = async (req, res) => {
   LOGGER.info(`IP:${req.ip}, URL:${req.originalUrl}, METHOD:${req.method}, Entered read task controller`);
   try {
-    const TASK_ID = Number(req.params.id);
+    const TASK_ID = parseInt(req.params.id);
     const TOKEN_DATA = verifyToken(req.headers.authorization.split(" ")[1]);
     const RESPONSE = await TASK_SERVICE.readTaskService(TOKEN_DATA.username, TASK_ID);
     if (RESPONSE.status) {
@@ -50,6 +50,20 @@ const readTask = async (req, res) => {
   }
 };
 
+const queryTasks = (data, queryData, req, res) => {
+  try {
+    const { title, priority, dueDate, sortValue, page, limit } = queryData;
+    data = TASK_SERVICE.filterTasksService(data, title, priority, dueDate);
+    data = sortValue ? TASK_SERVICE.sortTasksService(data, sortValue) : data;
+    data = page && limit ? TASK_SERVICE.paginateTasksService(data, page, limit) : data;
+  } catch (err) {
+    LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: Token is not valid`);
+    res.status(400).json({ message: err.message });
+    return false;
+  }
+  return data;
+};
+
 const readAllTasks = async (req, res) => {
   LOGGER.info(`IP:${req.ip}, URL:${req.originalUrl}, METHOD:${req.method}, Entered read all tasks controller`);
   try {
@@ -57,11 +71,7 @@ const readAllTasks = async (req, res) => {
     const RESPONSE = await TASK_SERVICE.readAllTasksService(TOKEN_DATA.username);
     if (RESPONSE.status) {
       res.status(200);
-      if (req.query) {
-        const { title, priority, dueDate, sortValue } = req.query;
-        RESPONSE.data = TASK_SERVICE.filterTasksService(RESPONSE.data, title, priority, dueDate);
-        RESPONSE.data = sortValue ? TASK_SERVICE.sortTasksService(RESPONSE.data, sortValue) : RESPONSE.data;
-      }
+      if (req.query) RESPONSE.data = queryTasks(RESPONSE.data, req.query, req, res);
       if (RESPONSE.data.length == 0) RESPONSE.data = "No tasks to display";
       LOGGER.info(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: Tasks read successfully!!!`);
     } else {
@@ -69,7 +79,7 @@ const readAllTasks = async (req, res) => {
       LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: ${RESPONSE.data}`);
     }
     delete RESPONSE.status;
-    res.json(RESPONSE);
+    if (RESPONSE.data) res.json(RESPONSE);
   } catch (err) {
     LOGGER.error(`IP: ${req.ip}, URL: ${req.originalUrl}, METHOD: ${req.method}, MESSAGE: Token is not valid`);
     res.status(401).json({ message: "Unable to read task!!! Please, login again!!!" });
@@ -79,7 +89,7 @@ const readAllTasks = async (req, res) => {
 const updateTask = async (req, res) => {
   LOGGER.info(`IP:${req.ip}, URL:${req.originalUrl}, METHOD:${req.method} Entered update task controller`);
   try {
-    const TASK_ID = Number(req.params.id);
+    const TASK_ID = parseInt(req.params.id);
     const TASK_DATA = req.body;
     const TOKEN_DATA = verifyToken(req.headers.authorization.split(" ")[1]);
     const RESPONSE = await TASK_SERVICE.updateTaskService(TOKEN_DATA.username, TASK_ID, TASK_DATA);
@@ -108,7 +118,7 @@ const updateTask = async (req, res) => {
 const deleteTask = async (req, res) => {
   LOGGER.info(`IP:${req.ip}, URL:${req.originalUrl}, METHOD:${req.method} Entered delete task controller`);
   try {
-    const TASK_ID = Number(req.params.id);
+    const TASK_ID = parseInt(req.params.id);
     const TOKEN_DATA = verifyToken(req.headers.authorization.split(" ")[1]);
     const RESPONSE = await TASK_SERVICE.deleteTaskService(TOKEN_DATA.username, TASK_ID);
     if (RESPONSE.status) {

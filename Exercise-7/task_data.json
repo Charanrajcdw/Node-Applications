@@ -132,15 +132,6 @@
         "title": "task10",
         "description": "task 4 description",
         "priority": "medium",
-        "dueDate": "2023-04-18",
-        "comments": "['comment 1','comment2']",
-        "createdDate": "2023-04-06T20:26:42.950Z",
-        "id": 15
-      },
-      {
-        "title": "task10",
-        "description": "task 4 description",
-        "priority": "medium",
         "dueDate": "2023-04-08",
         "comments": "['comment 1','comment2']",
         "createdDate": "2023-04-06T20:31:44.021Z",
