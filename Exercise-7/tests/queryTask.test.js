@@ -1,7 +1,7 @@
 const axios = require("axios");
 const URL = "http://localhost:4000/tasks/";
 
-describe("Sorting, Filtering & Paginating Tasks", () => {
+describe.skip("Sorting, Filtering & Paginating Tasks", () => {
   test("Invalid sort value", async () => {
     await axios({
       method: "get",

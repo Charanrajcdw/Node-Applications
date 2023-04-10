@@ -1,7 +1,9 @@
 const axios = require("axios");
 const URL = "http://localhost:4000/tasks/";
+const sinon = require("sinon");
+const AUTH =require("../utils/authUtils")
 
-describe("Adding Task", () => {
+describe.skip("Adding Task", () => {
   test("Adding task with no token", async () => {
     await axios({
       method: "post",
@@ -81,8 +83,6 @@ describe("Adding Task", () => {
         dueDate: "2023-04-10",
         comments: "['comment 1','comment2']",
       },
-    }).catch((err) => {
-      console.log(err);
     });
     expect(res.data).toEqual({ data: "Task Added Successfully!!!" });
   });

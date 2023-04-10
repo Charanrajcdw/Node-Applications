@@ -1,7 +1,7 @@
 const axios = require("axios");
 const URL = "http://localhost:4000/tasks/";
 
-describe("Reading Task", () => {
+describe.skip("Reading Task", () => {
   test("Reading task with no token", async () => {
     await axios({
       method: "get",

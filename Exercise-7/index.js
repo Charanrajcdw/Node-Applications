@@ -14,5 +14,5 @@ app.use("/tasks", TASK_ROUTES);
 app.use("/users", USER_ROUTES);
 
 app.listen(PORT, () => {
-  // LOGGER.info(`Server started and running on port: ${PORT}`);
+  LOGGER.info(`Server started and running on port: ${PORT}`);
 });

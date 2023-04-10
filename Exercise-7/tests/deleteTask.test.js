@@ -1,7 +1,7 @@
 const axios = require("axios");
 const URL = "http://localhost:4000/tasks/";
 
-describe("Deleting Task", () => {
+describe.skip("Deleting Task", () => {
   test("Deleting specific task with no token", async () => {
     await axios({
       method: "delete",

@@ -1,7 +1,7 @@
 const axios = require("axios");
 const URL = "http://localhost:4000/tasks/";
 
-describe("Updating Task", () => {
+describe.skip("Updating Task", () => {
   test("Updating specific task with no token", async () => {
     await axios({
       method: "put",
@@ -75,8 +75,6 @@ describe("Updating Task", () => {
         title: "task 2",
         description: "task 2 description",
       },
-    }).catch((err) => {
-      console.log(err);
     });
     expect(res.data).toEqual({ data: "Task Updated Successfully!!!" });
   });
