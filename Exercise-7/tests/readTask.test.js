@@ -78,7 +78,7 @@ describe("Reading Task", () => {
     let fileStub = sinon.stub(FILE_UTILS);
     fileStub.readFile.returns(Promise.resolve(readData));
     let res = await TASK_SERVICES.readAllTasksService("charan");
-    expect(res.data).toBe(readData[0].tasks);
+    expect(res.data).toEqual(readData[0].tasks);
     fileStub.readFile.restore();
     fileStub.writeFile.restore();
   });
@@ -86,7 +86,7 @@ describe("Reading Task", () => {
     let fileStub = sinon.stub(FILE_UTILS);
     fileStub.readFile.returns(Promise.resolve(readData));
     let res = await TASK_SERVICES.readTaskService("charan",1);
-    expect(res.data).toBe(readData[0].tasks.find(task=>task.id===1));
+    expect(res.data).toEqual(readData[0].tasks.find(task=>task.id===1));
     fileStub.readFile.restore();
     fileStub.writeFile.restore();
   });

@@ -40,22 +40,7 @@ let readData = [
   },
 ];
 
-describe.skip("Sorting, Filtering & Paginating Tasks", () => {
-  test("Invalid sort value", async () => {
-    await axios({
-      method: "get",
-      url: URL,
-      headers: {
-        authorization:
-          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNoYXJhbiIsImlhdCI6MTY4MTEwNDkxMH0.tqQBrvDIrrzzSjwNwJKF2qtoHAJHFXlsz9WeW7ygCq8",
-      },
-      params: {
-        sortValue: "custom",
-      },
-    }).catch((err) => {
-      expect(err.response.data).toEqual({ message: "Invalid sort request!!!" });
-    });
-  });
+describe("Paginating Tasks", () => {
   test("Page number and limit as 0", async () => {
     await axios({
       method: "get",
@@ -103,5 +88,21 @@ describe.skip("Sorting, Filtering & Paginating Tasks", () => {
     }).catch((err) => {
       expect(err.response.data).toEqual({ message: "Invalid page request!!!" });
     });
+  });
+  test("Valid page number and limit", async () => {
+    let res = await TASK_SERVICES.paginateTasksService(readData[0].tasks,2,1);
+    expect(JSON.stringify(res)).toBe(
+      JSON.stringify([
+        {
+          title: "title1",
+          description: "description",
+          dueDate: "2023-10-10",
+          priority: "low",
+          comments: "[]",
+          createdDate: "2023-04-10T05:40:31.832Z",
+          id: 2,
+        },
+      ])
+    );
   });
 });
